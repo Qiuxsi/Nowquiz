@@ -84,7 +84,7 @@ export default({
         "nishishui?"
       ],
       optionList: [1, 3],
-      answerList: ["恭喜你回答正确！", "回答错误"],
+      answerList: ["恭喜你回答正确！", "回答错误?"],
       loading: false
     }
   },
