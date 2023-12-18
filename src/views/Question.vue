@@ -1,11 +1,11 @@
 <template>
   <div style="text-align: left; position: absolute; height: 100%; width: 100%">
-    <div class="body" style="width: 75%; height: 85%; background: rgba(185, 213, 255, 0.19); border-radius: 10px; padding-left: 40px; padding-top: 40px; padding-right: 40px; margin-left: 10%; margin-top: 2.5%; box-shadow: 50px 50px 100px 10px rgba(0,0,0,.1); border: 1px solid #dedede;">
-      <div style="color: black; font-size: 38px; font-family: Audiowide; font-weight: 400; word-wrap: break-word">NowQuiz</div>
-      <el-row style="padding-left: 10px; height: 85%">
+    <div class="body" style="width: 75%; height: 85%; background: rgba(185, 213, 255, 0.19); border-radius: 10px; padding-left: 40px; margin-left: 11%; margin-top: 2.5%; box-shadow: 50px 50px 100px 10px rgba(0,0,0,.1); border: 1.5px solid #dedede;">
+      <el-row style="padding-left: 10px; height: 100%">
         
         <!-- 课程知识点选择 -->
-        <el-col :span="8" style="padding-top: 70px;">
+        <el-col :span="8" style="padding-top: 20px;">
+          <div style="color: black; font-size: 38px; font-family: Audiowide; font-weight: 400; word-wrap: break-word; margin-bottom: 50px;">NowQuiz</div>
           <span style="font-size: 25px; margin-left: 50px; font-weight: bold;">课程选择</span>
           <span style="font-size: 25px; margin-left: 70px; font-weight: bold;">知识点选择</span>
           <el-tabs tab-position="left" style="padding-top: 20px; margin-left: -30px" v-model="subject">
@@ -16,7 +16,7 @@
                 计算机组成原理
               </template>
               <div>
-              <el-tabs class="el-tabs-modify" tab-position="left" v-model="knowledge_1">
+              <el-tabs class="el-tabs-modify" tab-position="left" v-model="knowledge_1" style="float: right; margin-right: 50px;">
                 <el-tab-pane label="计算机系统概述" name="计算机系统概述"></el-tab-pane>
                 <el-tab-pane label="数据的表示和运算" name="数据的表示和运算"></el-tab-pane>
                 <el-tab-pane label="存储器层次结构" name="存储器层次结构"></el-tab-pane>
@@ -31,12 +31,12 @@
                 <svg t="1702621071195" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="19243" width="200" height="200"><path d="M1024 507.5c-0.2-24.3-2.1-48.1-5.6-71.5-15.4-103.7-61.9-197.2-129.8-270.8-23.6-25.6-49.8-48.8-78.1-69.2-9.7-7-19.7-13.7-29.9-20-25.1-15.5-51.6-28.8-79.3-39.9C644.1 13.4 581.8 0.6 516.5 0H512c-20.5 0-40.6 1.2-60.5 3.5C244.2 27.9 74.8 176.2 19.3 372.3c-9.2 32.5-15.3 66.3-17.9 101C0.5 486.1 0 499 0 512c0 104.2 31.1 201.1 84.6 282 14.4 21.9 30.5 42.6 48.1 61.9 2.3 2.5 4.6 5 7 7.5 21.6 22.9 45.2 43.7 70.7 62.3 84.6 61.8 188.9 98.3 301.7 98.3 262.3 0 478.5-197.3 508.5-451.5 1.3-11.2 2.3-22.6 2.9-34 0.4-8.8 0.7-17.6 0.7-26.4-0.2-1.6-0.2-3.1-0.2-4.6zM786.4 363c26.7-10.5 45.6-36.6 45.6-67 0-25-12.7-47-32-59.9V232c0-22.3-1.2-44.3-3.4-66 11.1 9.2 21.9 19 32.2 29.3 41.2 41.2 73.5 89.1 96 142.4C948.2 392.8 960 451.5 960 512c-60.5 0-119.2-11.8-174.4-35.2-10-4.2-19.7-8.8-29.3-13.6C769 431 779.1 397.5 786.4 363z m113.1 209.5c-14.7 12.3-30.1 23.9-46 34.6-30.4 20.5-62.8 38.1-96.5 52.4-53 22.4-108.6 36.5-165.8 42 56.4-50.9 103.6-111.8 138.7-179.9 52.1 26.2 109.2 43.8 169.6 50.9zM732.1 164.6c2.5 21 3.8 42.1 3.9 63.5-27.9 9.9-48 36.5-48 67.9 0 25.9 13.7 48.6 34.2 61.3-5.5 24.5-12.7 48.6-21.4 72.2-20.4-14.5-39.6-30.8-57.5-48.7-41.2-41.2-73.5-89.1-96-142.4-2.4-5.7-4.7-11.5-6.9-17.3 9.2-4.5 18.5-8.7 28-12.7 52.4-22.3 107.3-36.9 163.7-43.8z m-45.7-65.4c4.2 1.8 8.4 3.6 12.5 5.5-62.2 10-121.5 28.5-176.9 54.2-6.7-30.9-10-62.7-10-94.9 60.5 0 119.2 11.8 174.4 35.2z m-202.7 153c38.3 97 105.5 179.5 190.9 237-10.6 20.8-22.5 41-35.6 60.4-20.3 30.1-43.7 58.4-69.4 84.1-16 16-33.1 31.2-51 45.2-9.3-4.4-19.7-6.8-30.7-6.8-20.9 0-39.7 8.9-52.8 23.1-41.2-7.4-81.4-19.3-120.2-35.7-33.6-14.2-66.1-31.9-96.5-52.4-0.8-0.6-1.7-1.1-2.5-1.7 6.7-23.4 14.9-46.4 24.5-69 15.4-36.5 34.5-71.7 56.8-104.6 8-11.9 16.5-23.5 25.4-34.9 6.8 2.1 14 3.3 21.4 3.3 39.8 0 72-32.2 72-72 0-8.4-1.4-16.4-4-23.8 16.5-13.9 33.8-27 51.7-39 6.5-4.7 13.2-9 20-13.2z m-355 492c-11.2-18.5-21.1-37.8-29.5-57.8C81.9 645.6 71 602.9 66.4 559c23.6 26.2 49.4 50.4 77 72.3-7.9 36.6-12.9 74.3-14.7 112.9z m5.7-206.6c-24.7-24.7-47.3-51.9-67-80.7 5-41.1 15.7-81 31.8-119.3 22.6-53.3 54.9-101.3 96-142.4 41.2-41.2 89.1-73.5 142.4-96 35.5-15 72.4-25.3 110.4-30.7 0.4 41.7 5.7 82.3 15.5 121.1-34.7 20.4-67.3 43.8-97.7 69.8-6.9-2.2-14.2-3.4-21.8-3.4-39.8 0-72 32.2-72 72 0 8.5 1.5 16.6 4.2 24.2-49.8 62.4-88.8 133.7-114.3 211.2-9.5-8.3-18.7-16.9-27.5-25.8z m58 261.9c-0.3-7.8-0.4-15.6-0.4-23.5 0-35.2 2.9-70 8.7-104.2 59.2 37.1 125 64.7 195.2 80.6l-6.9 3c-62.5 26.4-128.5 41.2-196.6 44.1z m732.4-113.1c-22.6 53.3-54.9 101.3-96 142.4-41.2 41.2-89.1 73.5-142.4 96C631.2 948.2 572.5 960 512 960s-119.2-11.8-174.4-35.2c-38.6-16.3-74.3-37.7-106.7-63.9 75.7-7.5 147.4-28.3 212.9-60.1C456 810.3 471.3 816 488 816c31.5 0 58.2-20.2 68-48.3 149.6-4.7 286.1-61.3 392.1-152.5-5.7 24.2-13.5 48-23.3 71.2z" p-id="19244" fill="#1296db"></path></svg>
                 计算机网络
               </template>
-              <el-tabs class="el-tabs-modify" tab-position="left" v-model="knowledge_2">
-                <el-tab-pane label="计算机系统概述" name="first"></el-tab-pane>
-                <el-tab-pane label="数据的表示和运算" name="second"></el-tab-pane>
-                <el-tab-pane label="存储器层次结构" name="third"></el-tab-pane>
-                <el-tab-pane label="指令系统" name="fourth"></el-tab-pane>
-                <el-tab-pane label="中央处理器" name="fifth"></el-tab-pane>
+              <el-tabs class="el-tabs-modify" tab-position="left" v-model="knowledge_2" style="float: right; margin-right: 80px;">
+                <el-tab-pane label="物理层" name="物理层"></el-tab-pane>
+                <el-tab-pane label="数据链路层" name="数据链路层"></el-tab-pane>
+                <el-tab-pane label="网络层" name="网络层"></el-tab-pane>
+                <el-tab-pane label="传输层" name="传输层"></el-tab-pane>
+                <el-tab-pane label="应用层" name="应用层"></el-tab-pane>
               </el-tabs>
             </el-tab-pane>
 
@@ -45,12 +45,11 @@
                 <svg t="1702620885180" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10090" width="200" height="200"><path d="M381.368889 312.405333c-24.462222 0-43.719111 9.144889-57.799111 27.164445-14.08 18.048-20.992 41.756444-20.992 70.656 0 28.416 6.912 51.882667 20.494222 69.916444 13.596444 18.033778 32.611556 27.164444 56.576 27.164445 24.462222 0 43.463111-8.647111 57.059556-25.941334 13.582222-17.28 20.494222-40.504889 20.494222-69.902222 0-30.634667-6.670222-54.584889-19.768889-72.376889-13.326222-17.777778-31.857778-26.680889-56.064-26.680889z" fill="#1296db" p-id="10091"></path><path d="M882.531556 42.666667H141.468444A98.773333 98.773333 0 0 0 42.666667 141.468444v543.431112a98.773333 98.773333 0 0 0 98.801777 98.816h247.025778l-49.408 123.505777h-86.456889a37.006222 37.006222 0 0 0-37.048889 37.063111A37.006222 37.006222 0 0 0 252.629333 981.333333h518.741334a37.006222 37.006222 0 0 0 37.048889-37.048889 37.006222 37.006222 0 0 0-37.048889-37.048888h-86.471111l-49.393778-123.52h247.025778A98.773333 98.773333 0 0 0 981.333333 684.913778V141.482667A98.773333 98.773333 0 0 0 882.531556 42.666667zM378.595556 561.408c-41.998222 0-76.088889-13.838222-102.257778-41.244444-26.183111-27.676444-39.281778-63.004444-39.281778-106.481778 0-45.937778 13.340444-83.242667 40.263111-112.142222 26.680889-28.899556 62.250667-43.235556 106.211556-43.235556 41.756444 0 75.591111 13.838222 101.034666 41.756444 25.457778 27.918222 38.286222 63.715556 38.286223 107.448889 0 45.696-13.340444 82.759111-39.765334 111.160889-26.922667 28.401778-61.511111 42.737778-104.490666 42.737778z m347.548444-22.229333c-19.996444 14.819556-48.156444 22.229333-84.963556 22.229333-33.592889 0-61.013333-5.432889-82.503111-16.312889v-62.492444C582.158222 502.115556 609.080889 512 638.961778 512c17.052444 0 29.895111-2.958222 38.300444-8.888889 8.632889-5.930667 12.842667-13.340444 12.842667-22.471111 0-7.921778-3.470222-15.573333-10.140445-22.485333-6.656-6.926222-24.689778-16.554667-53.845333-28.657778-45.696-19.512889-68.664889-47.672889-68.664889-84.721778 0-27.164444 10.382222-48.426667 31.118222-63.488 20.764444-15.075556 48.170667-22.471111 82.261334-22.471111 28.657778 0 52.622222 3.697778 72.135111 11.093333v58.552889c-19.768889-13.340444-42.737778-20.010667-68.920889-20.010666-15.317333 0-27.676444 2.730667-36.807111 8.391111-9.144889 5.688889-13.838222 13.112889-13.838222 22.499555 0 7.651556 3.214222 14.563556 9.386666 20.992 6.428444 6.414222 21.987556 15.075556 46.691556 25.941334 29.155556 12.586667 49.152 25.685333 60.017778 39.509333 10.865778 13.838222 16.312889 30.392889 16.312889 49.649778 0.241778 27.676444-9.884444 49.166222-29.653334 63.729777z" fill="#1296db" p-id="10092"></path></svg>
                 操作系统
               </template>
-              <el-tabs class="el-tabs-modify" tab-position="left" v-model="knowledge_3">
-                <el-tab-pane label="计算机系统概述" name="first"></el-tab-pane>
-                <el-tab-pane label="数据的表示和运算" name="second"></el-tab-pane>
-                <el-tab-pane label="存储器层次结构" name="third"></el-tab-pane>
-                <el-tab-pane label="指令系统" name="fourth"></el-tab-pane>
-                <el-tab-pane label="中央处理器" name="fifth"></el-tab-pane>
+              <el-tabs class="el-tabs-modify" tab-position="left" v-model="knowledge_3" style="float: right; margin-right: 80px;">
+                <el-tab-pane label="进程管理" name="进程管理"></el-tab-pane>
+                <el-tab-pane label="内存管理" name="内存管理"></el-tab-pane>
+                <el-tab-pane label="文件管理" name="文件管理"></el-tab-pane>
+                <el-tab-pane label="I/O管理" name="I/O管理"></el-tab-pane>
               </el-tabs>
             </el-tab-pane>
             
@@ -59,20 +58,21 @@
                 <svg t="1702620850546" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8525" width="200" height="200"><path d="M896.00324 352c70.7 0 128-57.3 128-128 0-70.6-57.4-128-128-128-70.7 0-128 57.3-128 128 0 18.8 4.1 36.7 11.3 52.8 2.7 6 1.4 13.1-3.3 17.8l-24.2 24.2c-5.7 5.7-14.9 6.3-21.2 1.2-38.1-30.1-86.3-48-138.6-48-18.8 0-37.1 2.3-54.6 6.7-6.9 1.7-14.1-1.4-17.7-7.5l-6.6-11.4c-3.4-5.8-2.7-13.1 1.6-18.3 18.6-22.6 29.7-51.6 29.3-83.2C543.10324 89 486.30324 32.6 417.00324 32c-70.6-0.6-128.1 56.1-129 126.3-0.9 69.5 56.5 128.6 126 129.6 9.4 0.1 18.5-0.7 27.4-2.5 6.8-1.4 13.6 1.7 17.1 7.7l2.2 3.8c4 7 2.2 15.9-4.2 20.7-42.4 32.3-73 79.4-84 133.6-1.5 7.4-8.1 12.7-15.7 12.7h-94.1c-6.6 0-12.6-4-14.9-10.2-18.1-48-64.3-82.2-118.5-82.8C58.70324 370.3 0.50324 427.6 0.00324 498.1-0.49676 569.2 57.00324 627 128.00324 627c56.7 0 104.8-36.9 121.6-87.9 2.2-6.6 8.3-11.1 15.2-11.1h92c7.6 0 14.2 5.4 15.7 12.9 9.5 46.7 33.5 88 67 119.2 5.4 5 6.6 13.2 2.9 19.6l-21.7 37.6c-3.7 6.3-11.1 9.4-18.2 7.4-11.1-3.1-22.7-4.7-34.8-4.7-69.7 0.1-127 56.8-127.8 126.6-0.8 71.7 57.4 130 129.1 129.4 69.5-0.6 126.3-57.3 126.9-126.8 0.3-28-8.5-53.9-23.5-75.1-3.6-5.1-3.9-11.8-0.8-17.2l24.9-43.1c3.9-6.7 12-9.7 19.3-7 23.7 8.6 49.3 13.2 76 13.2 34.9 0 67.9-8 97.3-22.2 7.6-3.7 16.7-0.9 20.9 6.4l37 64c-26.3 23.5-43 57.7-43 95.8 0 70.9 58 128.5 128.9 128 69.7-0.5 126.2-56.7 127.1-126.3 0.9-70.1-57-129.3-127.1-129.7-6.2 0-12.3 0.4-18.3 1.2-6.5 0.9-12.8-2.2-16.1-7.8l-39.2-67.9c-3.4-5.9-2.7-13.3 1.7-18.4 34.2-39.3 54.9-90.7 54.9-147 0-38.9-9.9-75.5-27.4-107.4-3.4-6.2-2.2-13.9 2.8-18.9l28.4-28.4c4.9-4.9 12.4-6 18.7-2.9 17.4 8.6 36.9 13.5 57.6 13.5z m0-192c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zM128.00324 563c-35.3 0-64-28.7-64-64s28.7-64 64-64 64 28.7 64 64-28.7 64-64 64z m240 349c-35.3 0-64-28.7-64-64s28.7-64 64-64 64 28.7 64 64-28.7 64-64 64z m464-112c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zM416.00324 224c-35.3 0-64-28.7-64-64s28.7-64 64-64 64 28.7 64 64-28.7 64-64 64z m289.1 385.1C674.90324 639.4 634.70324 656 592.00324 656s-82.9-16.6-113.1-46.9C448.60324 578.9 432.00324 538.7 432.00324 496s16.6-82.9 46.9-113.1C509.10324 352.6 549.30324 336 592.00324 336s82.9 16.6 113.1 46.9C735.40324 413.1 752.00324 453.3 752.00324 496s-16.6 82.9-46.9 113.1z" p-id="8526" fill="#1296db"></path></svg>
                 数据结构
               </template>
-              <el-tabs class="el-tabs-modify" tab-position="left" v-model="knowledge_4">
-                <el-tab-pane label="计算机系统概述" name="first"></el-tab-pane>
-                <el-tab-pane label="数据的表示和运算" name="second"></el-tab-pane>
-                <el-tab-pane label="存储器层次结构" name="third"></el-tab-pane>
-                <el-tab-pane label="指令系统" name="fourth"></el-tab-pane>
-                <el-tab-pane label="中央处理器" name="fifth"></el-tab-pane>
+              <el-tabs class="el-tabs-modify" tab-position="left" v-model="knowledge_4" style="float: right; margin-right: 80px;">
+                <el-tab-pane label="集合" name="集合"></el-tab-pane>
+                <el-tab-pane label="线性表" name="线性表"></el-tab-pane>
+                <el-tab-pane label="串" name="串"></el-tab-pane>
+                <el-tab-pane label="二叉树" name="二叉树"></el-tab-pane>
+                <el-tab-pane label="森林" name="森林"></el-tab-pane>
+                <el-tab-pane label="图" name="图"></el-tab-pane>
               </el-tabs>
             </el-tab-pane>
           </el-tabs>
         </el-col>
 
         <!-- 聊天框 -->
-        <el-col :span="16" style="height: 103%; margin-top: -25px">
-        <div style="background-color: white; overflow-y: auto; height: 100%; border-radius: 20px; padding-top: 10px; padding-bottom: 30px; border: 1.5px solid rgb(187, 187, 187)">
+        <el-col :span="16" style="height: 100%">
+        <div style="background-color: white; overflow-y: auto; height: 100%; border-radius: 0px 10px 10px 0px; border-left: 1.5px solid #dedede;">
           <div id="question">
             <svg style="width: 32px; height: 32px; margin-top: 8px" t="1702676593953" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10962" width="200" height="200"><path d="M717.12 274H762c82.842 0 150 67.158 150 150v200c0 82.842-67.158 150-150 150H262c-82.842 0-150-67.158-150-150V424c0-82.842 67.158-150 150-150h44.88l-18.268-109.602c-4.086-24.514 12.476-47.7 36.99-51.786 24.514-4.086 47.7 12.476 51.786 36.99l20 120c0.246 1.472 0.416 2.94 0.516 4.398h228.192c0.1-1.46 0.27-2.926 0.516-4.398l20-120c4.086-24.514 27.272-41.076 51.786-36.99 24.514 4.086 41.076 27.272 36.99 51.786L717.12 274zM262 364c-33.138 0-60 26.862-60 60v200c0 33.138 26.862 60 60 60h500c33.138 0 60-26.862 60-60V424c0-33.138-26.862-60-60-60H262z m50 548c-24.852 0-45-20.148-45-45S287.148 822 312 822h400c24.852 0 45 20.148 45 45S736.852 912 712 912H312z m-4-428c0-24.852 20.148-45 45-45S398 459.148 398 484v40c0 24.852-20.148 45-45 45S308 548.852 308 524v-40z m318 0c0-24.852 20.148-45 45-45S716 459.148 716 484v40c0 24.852-20.148 45-45 45S626 548.852 626 524v-40z" fill="#444444" p-id="10963"></path></svg>
               <div class="info">
@@ -107,8 +107,8 @@
             </div>
           </div>
           <div>
-            <el-button type="info" size="medium" style="margin-left: 20px;" @click="nextQuestion(questionList.length)" v-show="!questionList.length">开始问答</el-button>
-            <el-button type="info" size="medium" style="margin-left: 20px;" @click="nextQuestion(questionList.length)" v-show="questionList.length">下一题</el-button>
+            <el-button type="info" size="medium" style="margin-left: 20px; margin-top: 30px;" @click="nextQuestion(questionList.length)" v-show="!questionList.length">开始问答</el-button>
+            <el-button type="info" size="medium" style="margin-left: 20px; margin-bottom: 30px;" @click="nextQuestion(questionList.length)" v-show="questionList.length">下一题</el-button>
           </div>
         </div>
         </el-col>
@@ -190,8 +190,15 @@ export default({
   width: 29px;
   margin-right: 10px;
 }
+.el-tabs-modify .el-tabs__active-bar {
+  background: none !important;
+}
+.el-tabs-modify .el-tabs__nav-wrap::after {
+  height: 0 !important;
+}
 .el-tabs__item {
   font-size: 18px !important;
+  font-family: Arial !important;
 }
 #question {
   margin-top: 10px;
@@ -205,7 +212,7 @@ export default({
 .info-content {
   padding: 10px;
   font-size: 16px;
-  background: #A3C3F6;
+  background: #e7f8ff;
   position: relative;
   margin-top: 8px;
   white-space: pre-wrap;
@@ -216,7 +223,7 @@ export default({
   left: -8px;
   top: 8px;
   content: '';
-  border-right: 10px solid #A3C3F6;
+  border-right: 10px solid #e7f8ff;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
 }
@@ -241,7 +248,7 @@ export default({
   margin-right: 10px;
   position: relative;
   margin-top: 8px;
-  background: #A3C3F6;
+  background: #d0d7de;
   text-align: left;
 }
 .answer-info-content::after {
@@ -249,7 +256,7 @@ export default({
   right: -8px;
   top: 8px;
   content: '';
-  border-left: 10px solid #A3C3F6;
+  border-left: 10px solid #d0d7de;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
 }

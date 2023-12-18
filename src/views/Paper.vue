@@ -1,11 +1,11 @@
 <template>
   <div style="text-align: left; position: absolute; height: 100%; width: 100%">
-    <div class="body" style="width: 75%; height: 85%; background: rgba(185, 213, 255, 0.19); border-radius: 10px; padding-left: 40px; padding-top: 40px; padding-right: 40px; margin-left: 10%; margin-top: 2.5%; box-shadow: 50px 50px 100px 10px rgba(0,0,0,.1); border: 1px solid #dedede;">
-      <div style="color: black; font-size: 34px; font-family: Audiowide; font-weight: 400; word-wrap: break-word">NowQuiz</div>
-      <el-row style="padding-left: 30px; height: 85%">
+    <div class="body" style="width: 75%; height: 85%; background: rgba(185, 213, 255, 0.19); border-radius: 10px; padding-left: 40px; margin-left: 11%; margin-top: 2.5%; box-shadow: 50px 50px 100px 10px rgba(0,0,0,.1); border: 1px solid #dedede;">
+      <el-row style="padding-left: 10px; height: 100%">
         
         <!-- 课程知识点选择 -->
-        <el-col :span="5" style="padding-top: 50px;">
+        <el-col :span="5" style="padding-top: 20px;">
+          <div style="color: black; font-size: 38px; font-family: Audiowide; font-weight: 400; word-wrap: break-word; margin-bottom: 50px;">NowQuiz</div>
           <span style="font-size: 25px; margin-left: 50px; font-weight: bold;">课程选择</span>
           <el-tabs class="el-tabs-modify" tab-position="left" style="padding-top: 20px; margin-left: -30px" v-model="subject">
             
@@ -41,8 +41,8 @@
         </el-col>
 
         <!-- 聊天框 -->
-        <el-col :span="19" style="height: 103%; margin-top: -25px">
-        <div style="background-color: white; overflow-y: auto; height: 100%; border-radius: 20px; padding-top: 10px; padding-bottom: 30px; border: 1.5px solid rgb(187, 187, 187)">
+        <el-col :span="19" style="height: 100%;">
+        <div style="background-color: white; overflow-y: auto; height: 100%; border-radius: 0px 10px 10px 0px; border-left: 1.5px solid #dedede;">
           <div id="question">
             <svg style="width: 32px; height: 32px; margin-top: 8px" t="1702676593953" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10962" width="200" height="200"><path d="M717.12 274H762c82.842 0 150 67.158 150 150v200c0 82.842-67.158 150-150 150H262c-82.842 0-150-67.158-150-150V424c0-82.842 67.158-150 150-150h44.88l-18.268-109.602c-4.086-24.514 12.476-47.7 36.99-51.786 24.514-4.086 47.7 12.476 51.786 36.99l20 120c0.246 1.472 0.416 2.94 0.516 4.398h228.192c0.1-1.46 0.27-2.926 0.516-4.398l20-120c4.086-24.514 27.272-41.076 51.786-36.99 24.514 4.086 41.076 27.272 36.99 51.786L717.12 274zM262 364c-33.138 0-60 26.862-60 60v200c0 33.138 26.862 60 60 60h500c33.138 0 60-26.862 60-60V424c0-33.138-26.862-60-60-60H262z m50 548c-24.852 0-45-20.148-45-45S287.148 822 312 822h400c24.852 0 45 20.148 45 45S736.852 912 712 912H312z m-4-428c0-24.852 20.148-45 45-45S398 459.148 398 484v40c0 24.852-20.148 45-45 45S308 548.852 308 524v-40z m318 0c0-24.852 20.148-45 45-45S716 459.148 716 484v40c0 24.852-20.148 45-45 45S626 548.852 626 524v-40z" fill="#444444" p-id="10963"></path></svg>
               <div class="info">
@@ -55,16 +55,16 @@
               <div class="info">
                 <p class="info-content">
                   <span>{{item}}</span>
-                  <el-button @click="copyText(index)" style="width: 35px; height: 35px; float: right; margin-top: -35px; background-color: #A3C3F6;" v-show="item.length > 20">
-                    <svg style="margin-left: 12px; width: 25px; height: 25px;" t="1702673743720" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4742" width="200" height="200"><path d="M720 192h-544A80.096 80.096 0 0 0 96 272v608C96 924.128 131.904 960 176 960h544c44.128 0 80-35.872 80-80v-608C800 227.904 764.128 192 720 192z m16 688c0 8.8-7.2 16-16 16h-544a16 16 0 0 1-16-16v-608a16 16 0 0 1 16-16h544a16 16 0 0 1 16 16v608z" p-id="4743" fill="#ffffff"></path><path d="M848 64h-544a32 32 0 0 0 0 64h544a16 16 0 0 1 16 16v608a32 32 0 1 0 64 0v-608C928 99.904 892.128 64 848 64z" p-id="4744" fill="#ffffff"></path><path d="M608 360H288a32 32 0 0 0 0 64h320a32 32 0 1 0 0-64zM608 520H288a32 32 0 1 0 0 64h320a32 32 0 1 0 0-64zM480 678.656H288a32 32 0 1 0 0 64h192a32 32 0 1 0 0-64z" p-id="4745" fill="#ffffff"></path></svg>
+                  <el-button type="info" @click="copyText(index)" style="width: 30px; height: 30px; float: right; margin-top: -35px;" v-show="item.length > 20"> 
+                    <svg style="margin-left:8px; width: 18px; height: 18px;" t="1702728079849" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4441" width="200" height="200"><path d="M720 192h-544A80.096 80.096 0 0 0 96 272v608C96 924.128 131.904 960 176 960h544c44.128 0 80-35.872 80-80v-608C800 227.904 764.128 192 720 192z m16 688c0 8.8-7.2 16-16 16h-544a16 16 0 0 1-16-16v-608a16 16 0 0 1 16-16h544a16 16 0 0 1 16 16v608z" p-id="4442" fill="#ffffff"></path><path d="M848 64h-544a32 32 0 0 0 0 64h544a16 16 0 0 1 16 16v608a32 32 0 1 0 64 0v-608C928 99.904 892.128 64 848 64z" p-id="4443" fill="#ffffff"></path><path d="M608 360H288a32 32 0 0 0 0 64h320a32 32 0 1 0 0-64zM608 520H288a32 32 0 1 0 0 64h320a32 32 0 1 0 0-64zM480 678.656H288a32 32 0 1 0 0 64h192a32 32 0 1 0 0-64z" p-id="4444" fill="#ffffff"></path></svg>
                   </el-button>
                 </p>
               </div>
             </div>
           </div>
           <div>
-            <el-button type="info" size="medium" style="margin-left: 20px;" @click="nextpaper(paperList.length)" v-show="!paperList.length">开始生成</el-button>
-            <el-button type="info" size="medium" style="margin-left: 20px;" @click="nextpaper(paperList.length)" v-show="paperList.length">继续生成</el-button>
+            <el-button type="info" size="medium" style="margin-left: 20px; margin-bottom: 30px;" @click="nextpaper(paperList.length)" v-show="!paperList.length">开始生成</el-button>
+            <el-button type="info" size="medium" style="margin-left: 20px; margin-bottom: 30px;" @click="nextpaper(paperList.length)" v-show="paperList.length">继续生成</el-button>
           </div>
         </div>
         </el-col>
@@ -128,14 +128,10 @@ export default({
   height: 29px;
   margin-right: 10px;
 }
-.el-tabs-modify .el-tabs__active-bar {
-  background: none !important;
-}
-.el-tabs-modify .el-tabs__nav-wrap::after {
-  height: 0 !important;
-}
 .el-tabs__item {
   font-size: 18px !important;
+  font-family: Arial !important;
+  font-weight: 525 !important;
 }
 #question {
   margin-top: 10px;
@@ -149,7 +145,7 @@ export default({
 .info-content {
   padding: 10px;
   font-size: 16px;
-  background: #A3C3F6;
+  background: #e7f8ff;
   position: relative;
   margin-top: 8px;
   white-space: pre-wrap;
@@ -160,7 +156,7 @@ export default({
   left: -8px;
   top: 8px;
   content: '';
-  border-right: 10px solid #A3C3F6;
+  border-right: 10px solid #e7f8ff;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
 }
