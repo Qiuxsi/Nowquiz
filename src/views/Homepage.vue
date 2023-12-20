@@ -43,6 +43,14 @@
       <div class="Rectangle3" style="width: 114px; height: 41px; left: 0px; top: 0px; position: absolute; background: #049DDF; border-radius: 8px"></div>
       <div style="left: 17px; top: 10px; position: absolute; text-align: center; color: white; font-size: 20px; font-family: Heiti SC; font-weight: 400; word-wrap: break-word">生成试卷</div>
     </div>
+    <div class="Group5" style="width: 114px; height: 41px; left: 311px; top: 615px; position: absolute; cursor: pointer;" @click="goToPaper()">
+      <div class="Rectangle3" style="width: 114px; height: 41px; left: 0px; top: 0px; position: absolute; background: #049DDF; border-radius: 8px"></div>
+      <div style="left: 17px; top: 10px; position: absolute; text-align: center; color: white; font-size: 20px; font-family: Heiti SC; font-weight: 400; word-wrap: break-word">错题回顾</div>
+    </div>
+    <div class="Group5" style="width: 114px; height: 41px; left: 452px; top: 615px; position: absolute; cursor: pointer;" @click="goToPaper()">
+      <div class="Rectangle3" style="width: 114px; height: 41px; left: 0px; top: 0px; position: absolute; background: #049DDF; border-radius: 8px"></div>
+      <div style="left: 17px; top: 10px; position: absolute; text-align: center; color: white; font-size: 20px; font-family: Heiti SC; font-weight: 400; word-wrap: break-word">学习路线</div>
+    </div>
     <div class="Nowquiz" style="left: 41px; top: 30px; position: absolute; text-align: center; color: black; font-size: 24px; font-family: Audiowide; font-weight: 400; word-wrap: break-word">NowQuiz</div>
     <div class="Ellipse15" style="width: 10px; height: 10px; left: 1042px; top: 628px; position: absolute; background: rgba(255, 255, 255, 0.50); border-radius: 9999px"></div>
     <div class="Ellipse16" style="width: 10px; height: 10px; left: 1062px; top: 628px; position: absolute; background: rgba(255, 255, 255, 0.50); border-radius: 9999px"></div>

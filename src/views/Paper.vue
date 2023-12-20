@@ -1,6 +1,6 @@
 <template>
   <div style="text-align: left; position: absolute; height: 100%; width: 100%">
-    <div class="body" style="width: 75%; height: 85%; background: rgba(185, 213, 255, 0.19); border-radius: 10px; padding-left: 40px; margin-left: 11%; margin-top: 2.5%; box-shadow: 50px 50px 100px 10px rgba(0,0,0,.1); border: 1px solid #dedede;">
+    <div class="body" style="width: 70%; height: 85%; background: rgba(185, 213, 255, 0.19); border-radius: 10px; padding-left: 40px; margin-left: 14%; margin-top: 2.5%; box-shadow: 50px 50px 100px 10px rgba(0,0,0,.1); border: 1px solid #dedede;">
       <el-row style="padding-left: 10px; height: 100%">
         
         <!-- 课程知识点选择 -->
@@ -63,8 +63,8 @@
             </div>
           </div>
           <div>
-            <el-button type="info" size="medium" style="margin-left: 20px; margin-bottom: 30px;" @click="nextpaper(paperList.length)" v-show="!paperList.length">开始生成</el-button>
-            <el-button type="info" size="medium" style="margin-left: 20px; margin-bottom: 30px;" @click="nextpaper(paperList.length)" v-show="paperList.length">继续生成</el-button>
+            <el-button type="info" size="medium" style="margin-left: 70px; margin-bottom: 30px;" @click="nextpaper(paperList.length)" v-show="!paperList.length">开始生成</el-button>
+            <el-button type="info" size="medium" style="margin-left: 70px; margin-bottom: 30px;" @click="nextpaper(paperList.length)" v-show="paperList.length">继续生成</el-button>
           </div>
         </div>
         </el-col>
@@ -122,7 +122,7 @@ export default({
 })
 </script>
 
-<style>
+<style scoped>
 .icon {
   width: 29px;
   height: 29px;
@@ -140,7 +140,7 @@ export default({
 }
 .info{
   margin-left: 10px;
-  max-width: 70%;
+  max-width: 90%;
 }
 .info-content {
   padding: 10px;

@@ -89,7 +89,7 @@
             <div id="answer" v-show="questionList[index].length > 20">
               <div class="answer-info">
                 <p class="answer-info-content">
-                  <el-radio-group v-model="optionList[index]">
+                  <el-radio-group v-model="optionList[index]" @change="getAnswer">
                     <el-radio :label="1">A</el-radio>
                     <el-radio :label="2">B</el-radio>
                     <el-radio :label="3">C</el-radio>
@@ -177,8 +177,46 @@ export default({
         headers: {'Content-Type': 'application/x-www-form-urlencoded'}
       }).then((res) => {
         console.log(res)
-        this.questionList[i] = res.data.question
-        this.answerList.push(res.data.answer)
+        this.questionList[i] = res.data
+        // this.answerList.push(res.data.answer)
+      })
+    },
+    getAnswer(val) {
+      var i = this.questionList.length - 1
+      this.answerList[i] = '正在判断选项...'
+      var option
+      switch (val) {
+        case 1:
+          option = 'A'
+          break
+        case 2:
+          option = 'B'
+          break
+        case 3:
+          option = 'C'
+          break
+        case 4:
+          option = 'D'
+          break
+      }
+      request({
+        method: 'POST',
+        url: '/judge',
+        data: {
+          question: this.questionList[i],
+          answer: option
+        },
+        transformRequest: [function (data) {
+          let ret = ''
+          for (let it in data) {
+            ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
+          }
+          return ret
+        }],
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+      }).then((res) => {
+        console.log(res)
+        this.answerList[i] = res.data
       })
     }
   }
